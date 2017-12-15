@@ -1,0 +1,19 @@
+<div class="representation">
+  <h2>Zapis {{representation}}:</h2>
+  <app-theory-presenter [addingStrategy]="title"></app-theory-presenter>
+  <h4>Zobacz na przykładzie:</h4>
+  <app-representation-form class="app-form" (representation)="showRepresentation($event)"></app-representation-form>
+  <br/>
+  <app-animation-test #Rep [animation]="representAnimation" *ngIf="showRepresentationAnimation"></app-animation-test>
+</div>
+
+<div class="algorithm">
+  <h2>Algorytm dodawania:</h2>
+  <img [src]="diagramPath" alt="Smiley face" style='min-width: 100%'>
+</div>
+
+<div class="example">
+  <h2>Przykład:</h2>
+  <app-adding-form class="app-form" (add)="showAdding($event)"></app-adding-form>
+  <app-animation-test [animation]="addAnimation" *ngIf="showAddingAnimation"></app-animation-test>
+</div>

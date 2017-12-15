@@ -1,0 +1,15 @@
+<div class="panel panel-default">
+<div class="panel-body">
+
+  <div id="left">
+    <button class="btn" [disabled]="disablePrev" (click)="onPrevFrameClick()">Wstecz</button>
+    <button class="btn" [disabled]="disableNext" (click)="onNextFrameClick()">Dalej</button>
+    <br/>
+    <span *ngFor="let line of getCurrentFrame()">
+      <span *ngFor="let cell of line"><span *ngIf="cell.shouldFade()" @fade [class]="cell.cssClass">{{cell.char}}</span><span *ngIf="cell.shouldDontAnimate()" [class]="cell.cssClass">{{cell.char}}</span></span><br/>
+    </span>
+  </div>
+
+</div>
+</div>
+

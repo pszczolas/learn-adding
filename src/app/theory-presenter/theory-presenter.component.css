@@ -1,0 +1,16 @@
+.inline-block {
+    display: table-cell;
+    border: solid 0px blue;
+    vertical-align: middle;
+}
+.big {
+    font-size: 3em;
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+}
+.overline {
+    text-decoration: overline;
+}
+.double-overline {
+    text-decoration: overline;
+    text-decoration-style: double;
+}

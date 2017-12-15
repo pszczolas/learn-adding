@@ -1,0 +1,10 @@
+nav {
+    margin-top: 20px;
+}
+ul {
+    width: 100%;
+}
+li {
+    width: 25%;
+    font-weight: bold;
+}

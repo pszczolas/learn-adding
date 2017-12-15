@@ -1,0 +1,19 @@
+span {
+    font-family: "console", monospace;
+    font-size: 17px;
+}
+.underline {
+    text-decoration: underline;
+}
+.overline {
+    text-decoration: overline;
+}
+.line-through {
+    text-decoration: line-through;
+}
+.bold {
+    font-weight: bold;
+}
+#left {
+    text-align: left;
+}

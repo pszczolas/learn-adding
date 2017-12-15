@@ -1,0 +1,49 @@
+<form #f="ngForm" (ngSubmit)="submit(f)">
+  <div>
+    <div class="form-group">
+      <label for="augent">Dodajna:</label>
+      <input 
+      ngModel 
+      name="augent" 
+      required 
+      pattern="[+--]?\d+,?\d*"
+      #augent="ngModel" 
+      type="text" 
+      id="augent" 
+      class="form-control">
+      <div class="alert alert-danger" *ngIf="augent.dirty && !augent.valid">
+        <div *ngIf="augent.errors.required">
+          To pole nie może być puste.
+        </div>
+        <div *ngIf="augent.errors.pattern">
+          Dodajna musi być liczbą w systemie dziesiętnym.
+        </div>      
+      </div>
+    </div>
+
+    <div class="form-group">
+        <label for="addend">Dodajnik:</label>
+        <input 
+        ngModel 
+        name="addend" 
+        required 
+        pattern="[+--]?\d+,?\d*" 
+        #addend="ngModel" 
+        type="text" 
+        id="addend" 
+        class="form-control">
+        <div class="alert alert-danger" *ngIf="addend.dirty && !addend.valid">
+          <div *ngIf="addend.errors.required">
+              To pole nie może być puste.             
+          </div>
+          <div *ngIf="addend.errors.pattern">
+            Dodajnik musi być liczbą w systemie dziesiętnym.<br/>            
+          </div>       
+        </div>
+      </div>
+  
+    <div class="form-group">
+      <button class="btn btn-primary" [disabled]="!f.valid">Dodaj</button>
+    </div>
+    </div>
+</form>

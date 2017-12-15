@@ -1,0 +1,22 @@
+p {
+    text-align: left;
+}
+li {
+    text-align: left;
+}
+.left-align {
+    text-align: left;
+}
+h3 {
+    align: left;
+}
+.underline {
+    text-decoration: underline;
+}
+.monospace{
+    font-family: "console", monospace;
+    font-size: 17px;
+}
+.bold {
+    font-weight: bold;
+}

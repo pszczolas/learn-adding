@@ -1,0 +1,87 @@
+<h1>Dodawanie liczb binarnych</h1>
+<h2>Cel</h2>
+<p class="left-align">
+  Ta strona została zrealizowana w ramach pracy dyplowej. 
+  Jej celem jest zapoznanie studentów informatyki z dodawania liczb w systemie dwójkowym z wykorzystaniem różnych zapisów liczb:
+</p>
+<ul class="left-align">
+  <li>zapisu modułowego</li>
+  <li>zapisu odwrotnego</li>
+  <li>zapisu dopełnieniowego</li>
+</ul>
+<p class="left-align">
+  Strona ta stanowi tylko uzupełnienie książek oraz skryptów związanych z arytmetyką systemów cyfrowych,
+  ponieważ nie skupia się na przedstawieniu teori dotyczącej każdej z metod dodawania liczb binarnych,
+  a na prezentacji ich zastosowania na przykładach.
+</p>
+<h2>Wymagania</h2>
+<p class="left-align">
+  Użytkownik korzystający z tej strony, powinien mieć już ogólne pojęcie na temat systemu dwójkowego, oraz umieć dokonywać konwersji (np. z systemu dziesiętnego na dwójkowy).
+</p>
+<h2>Podstawy</h2>
+<p class="left-align">
+  Poniżej, przedstawiono kilka mechanizmów wspólnych nie tylko dla poszczególnych metod dodawania, ale również dla arytmetki cyfrowej w ogóle.
+</p>
+<h3 class="left-align">Dodawanie pojedyńczych cyfr</h3>
+<p>0 + 0 =	0</p>
+<p>0 + 1 =	1</p>
+<p>1 + 0 =	1</p>
+<p>1 + 1 =	0<sup>1</sup> (gdzie <sup>1</sup> oznacza przeniesienie)</p> 
+<app-animation-test [animation]="addingAnimation"></app-animation-test>
+
+
+<h3 class="left-align">Znak liczby</h3>
+<p>
+W komputerze nie ma możliwości przechowywania bezpośrednio znaku "+" czy "-" służących nam do reprezentowania liczb dodatnich i ujemnych.
+Do zapisu liczby ze znakiem wykorzystuje się więc dodatkowy bit (tak zwany bit znaku), który umieszcza się po lewej stronie liczby. Bit ten przyjmuje wartość
+</p>
+<ul class="left-align">
+    <li>0 dla +</li>
+    <li>1 dla -</li>
+</ul>
+<p>
+  I tak np liczby:<br>
+</p>
+<ul class="left-align">
+  <li>+10010 można przedstawić jako 0.10010</li>
+  <li>-11 można przedstawić jako 1.11</li>
+</ul>
+<p>
+  Tak jak pokazano powyżej, w celu poprawienie czytelności bit znaku często odziela się od reszty bitów za pomocą kropki.
+</p>
+<h3 class="left-align">Nadmiar</h3>
+<p>
+  Komputer każdą liczbę przechowuje na określonej liczbie bitów (np. 32 lub 64 bity).
+  Wynik dodawania dwóch liczb zapisanych np. na 8 bitach każda, może nie zmieścić się na 8 bitach.
+  W takiej sytuacji, najstarszy (tutaj 9 licząc od prawej) bit zostanie utracony.
+  Taka sytuacja nazywana jest nadmiarem. Występuje zawsze, gdy wynik operacji arytmetycznej 
+  jest większy niż górny zakres danego formatu liczb binarnych 
+  np. dla 8 bitów wynik większy od 2<sup>8</sup> - 1, czyli większy od 255 (dla liczb bez znaku)<br>
+</p>
+<p>
+  Rozważmy dodawanie dwóch liczb bez znaku 244<sub>10</sub> = 11110100<sub>2</sub> oraz 134<sub>10</sub> = 10000110<sub>2</sub>:
+</p>
+<app-animation-test [animation]="overflowAnimation"></app-animation-test>
+<p>
+  Oczekiwanym wynikiem jest 378<sub>10</sub>=101111010<sub>2</sub>.<br>
+  Taki też otrzymaliśmy. Należy jednak mieć na uwadzę, że nie mieści się on na 8 bitach.
+  Z wiązku z tym, najstarszy bit zostanie odrzucony, dając w rezultacie 01111010<sub>2</sub>=122<sub>10</sub>.
+  Jest to oczywiście błędny wynik, dlatego istnieją sposoby wykrywania wystąpienia nadmiaru.
+</p>
+<h2>Oznaczenia</h2>
+<p>
+  Aby móc w łatwiejszy i bardziej ujednolicony sposób ukazać sposoby zapisu oraz dodawania liczb,
+  użyto następujących oznaczeń:
+</p>
+<ul>
+  <li>X - dodajna</li>
+  <li>Y - dodajnik</li>
+  <li>Z - suma</li>
+</ul>
+
+
+
+
+
+
+

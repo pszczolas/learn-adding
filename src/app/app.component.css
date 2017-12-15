@@ -1,0 +1,9 @@
+.main {
+    width: 70%;
+    margin: 20px;
+    display: inline-block;
+}
+#wrapper {
+    background-color: #acc1e0; /* for vizualization purposes */
+    text-align: center;
+  }

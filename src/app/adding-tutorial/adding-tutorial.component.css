@@ -1,0 +1,32 @@
+input {
+    width: 300px;
+    margin: auto;
+}
+.btn-primary {
+    width: 300px;
+    margin: 5px;
+}
+h1 {
+    text-align: center;
+}
+img {
+    overflow: hidden;
+    width: 50%;
+}
+.overline {
+    text-decoration: overline;
+}
+.line-through {
+    text-decoration: line-through;
+}
+.app-form {
+    display: inline-block;   
+    width: 50%;
+}
+.bold {
+    font-weight: bold;
+}
+app-theory-presenter {
+    text-align: left;
+}
+

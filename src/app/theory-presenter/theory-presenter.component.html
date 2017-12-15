@@ -1,0 +1,35 @@
+<div *ngIf="addingStrategy=='SM'">
+  <p>Liczbę X w zapisie modułowym przedstawia się jako:</p>
+  <div>
+    <div class="inline-block">X<sup>M</sup>=</div>
+    <div class="inline-block big">&#123;</div>
+    <div class="inline-block">
+      <div>0.|X| dla liczby X dodatniej</div>
+      <div>1.|X| dla liczby X ujemnej</div>      
+    </div>
+  </div>
+</div>
+<div *ngIf="addingStrategy=='U1'">
+  <p>Liczbę X w zapisie odwrotnym przedstawia się jako:</p>
+  <div>
+    <div class="inline-block">X<sup>O</sup>=</div>
+    <div class="inline-block big">&#123;</div>
+    <div class="inline-block">
+      <div>0.|X| dla liczby X dodatniej</div>
+      <div>1.<span class="overline">|X|</span> dla liczby X ujemnej</div>      
+    </div>
+  </div>
+  <p>Gdzie <span class="overline">|X|</span> otrzymuje się poprzez zamiane każdej jedynki w liczbie X na zero oraz każdego zera na jedynkę</p>
+</div>
+<div *ngIf="addingStrategy=='U2'">
+  <p>Liczbę X w zapisie dopełnienowym przedstawia się jako:</p>
+  <div>
+    <div class="inline-block">X<sup>D</sup>=</div>
+    <div class="inline-block big">&#123;</div>
+    <div class="inline-block">
+      <div>0.|X| dla liczby X dodatniej</div>
+      <div>1.<span class="double-overline">|X|</span> dla liczby X ujemnej</div>      
+    </div>
+  </div>
+  <p>Gdzie <span class="double-overline">|X|</span> otrzymuje się poprzez zamiane każdej jedynki w liczbie X na zero oraz każdego zera na jedynkę, a następnie dodaniu jedynki na najmniej znaczącej pozycji</p>
+</div>
