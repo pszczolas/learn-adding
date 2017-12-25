@@ -12,12 +12,12 @@ export class BlockDiagramService {
     }
   }
   SM(): string{
-    return "../assets/SM_642_sa.png";
+    return "https://raw.githubusercontent.com/pszczolas/adding-in-binary/master/src/assets/SM_642_sa.png";
   }
   U1(): string {
-    return "../assets/U1_642_2.png";
+    return "https://raw.githubusercontent.com/pszczolas/adding-in-binary/master/src/assets/U1_642_2.png";
   }
   U2(): string {
-    return "../assets/U2_642_2_sa.png";
+    return "https://raw.githubusercontent.com/pszczolas/adding-in-binary/master/src/assets/U2_642_2_sa.png";
   }
 }
