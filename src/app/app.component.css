@@ -3,6 +3,12 @@
     margin: 20px;
     display: inline-block;
 }
+@media only screen and (max-width: 1000px) {
+    .main {
+        width: 95%;
+        margin: auto;
+    }
+}
 #wrapper {
     background-color: #acc1e0; /* for vizualization purposes */
     text-align: center;
