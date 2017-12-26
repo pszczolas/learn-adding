@@ -13,8 +13,13 @@ export class RepresentationFormComponent implements OnInit {
   }
 
   submit(f, event: Event) {
-    event.preventDefault();
-    let number = f.value.number.replace(",", ".");
-    this.representation.emit(number);
+    try {
+      console.log(event);
+      event.preventDefault();
+      let number = f.value.number.replace(",", ".");
+      this.representation.emit(number);
+    } catch (e) {
+      console.log("sth went wrong ");
+    }
   }
 }
