@@ -15,6 +15,7 @@ export class RepresentationFormComponent implements OnInit {
   submit(f, event: Event) {
     try {
       console.log(event);
+      event.stopPropagation();
       event.preventDefault();
       let number = f.value.number.replace(",", ".");
       this.representation.emit(number);
