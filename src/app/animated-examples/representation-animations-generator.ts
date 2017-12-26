@@ -63,7 +63,7 @@ export class RepresentationAnimation {
     animateRepresentationU1(num: number, name: string = "X"): Animation{
         const addingLogic = new Adding();
         let inBN = num.toString(2).replace(".",",");;
-        let inU1 = this.representationConverter.toU2(inBN);
+        let inU1 = this.representationConverter.toU1(inBN);
         let eqAndPadSpaces = inBN.charAt(0)==="-" ? "=\xa0" : "=\xa0\xa0"; //hack to even binary and u1
         let f1 = new Frame();
         f1.appendLine("\xa0" + name + eqAndPadSpaces + inBN, animationStrategy.FADE_IN);
